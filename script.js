@@ -106,18 +106,29 @@
     const body = [
       `ชื่อ-นามสกุล: ${d.name}`,
       `เบอร์โทรศัพท์: ${d.phone}`,
+      `ประเภทงาน: ${d.service || '-'}`,
       `โครงการ/สถานที่: ${d.project || '-'}`,
       `งบประมาณ: ${d.budget || '-'}`,
       '',
       `ข้อความ: ${d.message || '-'}`
     ].join('\n');
     const subject = `สอบถามงานออกแบบ/บิลท์อิน - ${d.name}`;
-    window.location.href = `mailto:contact@builtinasset.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:areadesigns79@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     status.textContent = 'ขอบคุณค่ะ ระบบได้เปิดอีเมลพร้อมรายละเอียดของคุณแล้ว ทีมงานจะติดต่อกลับโดยเร็วที่สุด';
     status.className = 'form__status ok';
     form.reset();
   });
   form.querySelectorAll('input, textarea').forEach((f) => f.addEventListener('input', () => f.classList.remove('invalid')));
+
+  // Review carousel arrows
+  const reviews = document.getElementById('reviews');
+  document.querySelectorAll('.reviews-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const card = reviews.querySelector('.review');
+      const step = card ? card.getBoundingClientRect().width + 24 : reviews.clientWidth;
+      reviews.scrollBy({ left: step * Number(btn.dataset.dir), behavior: 'smooth' });
+    });
+  });
 
   document.getElementById('year').textContent = new Date().getFullYear();
 })();
