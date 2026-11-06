@@ -87,7 +87,7 @@
   // Inquiry form: validate, then open the visitor's email app with the details filled in
   const form = document.getElementById('inquiryForm');
   const status = document.getElementById('formStatus');
-  form.addEventListener('submit', (e) => {
+  if (form) form.addEventListener('submit', (e) => {
     e.preventDefault();
     let valid = true;
     form.querySelectorAll('[required]').forEach((f) => {
@@ -116,7 +116,7 @@
     status.className = 'form__status ok';
     form.reset();
   });
-  form.querySelectorAll('input, textarea').forEach((f) => f.addEventListener('input', () => f.classList.remove('invalid')));
+  if (form) form.querySelectorAll('input, textarea').forEach((f) => f.addEventListener('input', () => f.classList.remove('invalid')));
 
   // Review carousel arrows
   const reviews = document.getElementById('reviews');
@@ -128,5 +128,6 @@
     });
   });
 
-  document.getElementById('year').textContent = new Date().getFullYear();
+  const year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
 })();

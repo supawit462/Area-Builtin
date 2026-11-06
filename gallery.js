@@ -1,26 +1,12 @@
 /*
   Project gallery viewer.
-
-  To change a project's photos, edit its list below. Keys match data-gallery="p1".."p9"
-  on the project cards in index.html. Each entry can be a full image URL (e.g. "images/grand-rama2/01.jpg")
-  or an Unsplash photo id. The first photo should be the same as the card's cover.
+  Photos come from projects-data.js (load it before this file).
+  Cards are matched by data-gallery="p1", "p2", ... on the project cards.
 */
 (function () {
-  const GALLERIES = {
-    p1: ['photo-1600210492486-724fe5c67fb0', 'photo-1600585154340-be6161a56a0c', 'photo-1600566753190-17f0baa2a6c3', 'photo-1616486338812-3dadae4b4ace', 'photo-1600607687939-ce8a6c25118c'],
-    p2: ['photo-1618221195710-dd6b41faaea6', 'photo-1616594039964-ae9021a400a0', 'photo-1600121848594-d8644e57abab', 'photo-1631679706909-1844bbd07221', 'photo-1615529182904-14819c35db37'],
-    p3: ['photo-1600607687939-ce8a6c25118c', 'photo-1556912173-3bb406ef7e77', 'photo-1505693416388-ac5ce068fe85', 'photo-1617806118233-18e1de247200', 'photo-1484154218962-a197022b5858'],
-    p4: ['photo-1586023492125-27b2c045efd7', 'photo-1615529182904-14819c35db37', 'photo-1616486338812-3dadae4b4ace', 'photo-1505693416388-ac5ce068fe85', 'photo-1600566752355-35792bedcfea'],
-    p5: ['photo-1600566753190-17f0baa2a6c3', 'photo-1556912173-3bb406ef7e77', 'photo-1484154218962-a197022b5858', 'photo-1600573472550-8090b5e0745e', 'photo-1600607687939-ce8a6c25118c'],
-    p6: ['photo-1631679706909-1844bbd07221', 'photo-1505693416388-ac5ce068fe85', 'photo-1616594039964-ae9021a400a0', 'photo-1600121848594-d8644e57abab', 'photo-1618221195710-dd6b41faaea6'],
-    p7: ['photo-1617806118233-18e1de247200', 'photo-1586023492125-27b2c045efd7', 'photo-1600566752355-35792bedcfea', 'photo-1615529182904-14819c35db37', 'photo-1600047509807-ba8f99d2cdde'],
-    p8: ['photo-1600585154526-990dced4db0d', 'photo-1600585154340-be6161a56a0c', 'photo-1600047509807-ba8f99d2cdde', 'photo-1600573472550-8090b5e0745e', 'photo-1600566752355-35792bedcfea'],
-    p9: ['photo-1558904541-efa843a96f01', 'photo-1600585154340-be6161a56a0c', 'photo-1600047509807-ba8f99d2cdde', 'photo-1600585154526-990dced4db0d', 'photo-1600573472550-8090b5e0745e']
-  };
-
-  const url = (src, w) => (/^(https?:|\/|\.|images\/)/.test(src)
-    ? src
-    : `https://images.unsplash.com/${src}?auto=format&fit=crop&w=${w}&q=80`);
+  const GALLERIES = {};
+  (window.AREA_PROJECTS || []).forEach((p) => { GALLERIES[p.id] = p.photos; });
+  const url = window.AREA_IMG;
 
   const lb = document.getElementById('lightbox');
   if (!lb) return;

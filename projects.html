@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ผลงานทั้งหมด | AREA DESIGNS</title>
+<meta name="description" content="รวมผลงานออกแบบตกแต่งภายใน บิวท์อิน รีโนเวท และต่อเติมบ้านของ AREA DESIGNS แยกตามหมวดหมู่ งาน Interior และงาน Renovate">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="logo" aria-label="AREA DESIGNS">
+      <span class="logo__mark"><i>A</i></span>
+      <span class="logo__text">AREA<em>DESIGNS</em></span>
+    </a>
+    <nav class="nav__links" id="navLinks" aria-label="เมนูหลัก">
+      <a href="index.html#about">เกี่ยวกับเรา</a>
+      <a href="index.html#services">บริการ</a>
+      <a href="projects.html" class="active" aria-current="page">ผลงาน</a>
+      <a href="index.html#why">ทำไมต้องเรา</a>
+      <a href="index.html#process">ขั้นตอน</a>
+      <a href="index.html#contact" class="btn btn--gold btn--sm">คุยกับเรา</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="เปิดเมนู" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="page-hero__bg" aria-hidden="true"></div>
+  <div class="container page-hero__inner">
+    <nav class="breadcrumb" aria-label="เส้นทาง">
+      <a href="index.html">หน้าแรก</a><span aria-hidden="true">/</span><span>ผลงานทั้งหมด</span>
+    </nav>
+    <p class="eyebrow">Our Projects</p>
+    <h1 class="section-title">ผลงาน<span class="gold-text">ทั้งหมด</span></h1>
+    <p class="section-sub">รวมผลงานออกแบบตกแต่งภายใน บิวท์อิน รีโนเวท และต่อเติมบ้าน<br>เลือกหมวดหมู่ แล้วคลิกที่การ์ดเพื่อดูรูปทั้งหมดของแต่ละโปรเจกต์</p>
+  </div>
+</section>
+
+<section class="section section--tight projects" id="projects">
+  <div class="container">
+    <div class="filters" role="group" aria-label="หมวดหมู่ผลงาน">
+      <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">ทั้งหมด <span class="filter-btn__count" data-count="all"></span></button>
+      <button type="button" class="filter-btn" data-filter="interior" aria-pressed="false">งาน Interior <span class="filter-btn__count" data-count="interior"></span></button>
+      <button type="button" class="filter-btn" data-filter="renovate" aria-pressed="false">งาน Renovate <span class="filter-btn__count" data-count="renovate"></span></button>
+    </div>
+    <p class="filters__status" id="filterStatus" aria-live="polite"></p>
+    <div class="projects__grid" id="allProjects"></div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container cta-band__inner reveal">
+    <div>
+      <h2>อยากได้บ้านแบบนี้บ้างไหม?</h2>
+      <p>ปรึกษาฟรี เข้าชมโรงงาน โชว์รูม หรือหน้างานจริงได้ก่อนตัดสินใจ</p>
+    </div>
+    <a href="index.html#contact" class="btn btn--gold">คุยกับเรา <span class="en">Let's Chat</span></a>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <a href="index.html" class="logo">
+        <span class="logo__mark"><i>A</i></span>
+        <span class="logo__text">AREA<em>DESIGNS</em></span>
+      </a>
+      <p class="footer__company">บริษัท แอเรียดีไซน์ จำกัด · เลขประจำตัวผู้เสียภาษี 0 1055 57146 30 9</p>
+    </div>
+    <p>Interior &amp; Built-in · Renovation · Home Extension · Landscape</p>
+    <p class="footer__copy">© <span id="year">2026</span> AREA DESIGNS. All rights reserved.</p>
+  </div>
+</footer>
+
+<a href="https://line.me/ti/p/gt6LY66fMe" class="line-float" target="_blank" rel="noopener" aria-label="แชทผ่าน LINE">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.3 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8Z"/></svg>
+  <span>LINE</span>
+</a>
+<!-- Project gallery viewer (filled by gallery.js) -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lbTitle" hidden>
+  <div class="lightbox__top">
+    <div class="lightbox__info">
+      <h2 class="lightbox__title" id="lbTitle"></h2>
+      <p class="lightbox__sub" id="lbSub"></p>
+    </div>
+    <span class="lightbox__counter" id="lbCounter" aria-live="polite"></span>
+    <button type="button" class="lightbox__close" id="lbClose" aria-label="ปิดแกลเลอรี">&times;</button>
+  </div>
+  <div class="lightbox__stage" id="lbStage">
+    <button type="button" class="lightbox__arrow lightbox__arrow--prev" id="lbPrev" aria-label="รูปก่อนหน้า">&#8592;</button>
+    <div class="lightbox__viewport">
+      <div class="lightbox__track" id="lbTrack"></div>
+    </div>
+    <button type="button" class="lightbox__arrow lightbox__arrow--next" id="lbNext" aria-label="รูปถัดไป">&#8594;</button>
+  </div>
+  <div class="lightbox__thumbs" id="lbThumbs" role="tablist" aria-label="รูปย่อ"></div>
+</div>
+
+<a href="https://www.facebook.com/profile.php?id=100049134714486" class="fb-float" target="_blank" rel="noopener" aria-label="เพจ Facebook">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12Z"/></svg>
+  <span>Facebook</span>
+</a>
+
+<script src="projects-data.js"></script>
+<script src="projects-page.js"></script>
+<script src="script.js"></script>
+<script src="gallery.js"></script>
+</body>
+</html>
