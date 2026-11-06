@@ -163,6 +163,7 @@ a { color: inherit; text-decoration: none; }
   font-size: clamp(2.6rem, 7vw, 5.4rem);
   line-height: 1.05;
   letter-spacing: -.02em;
+  width: max-content;
 }
 .hero__th { font-size: clamp(1.1rem, 2.2vw, 1.5rem); color: var(--gold-soft); margin: 12px 0 20px; font-weight: 400; }
 .hero__sub { color: #CFCFCF; max-width: 560px; font-weight: 300; font-size: 1.05rem; }
