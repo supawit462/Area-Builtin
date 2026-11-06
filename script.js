@@ -2,13 +2,11 @@
   const nav = document.getElementById('nav');
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('navLinks');
-  const toTop = document.getElementById('toTop');
 
-  // Navbar background + back-to-top button on scroll
+  // Navbar background on scroll
   const onScroll = () => {
     const y = window.scrollY;
     nav.classList.toggle('scrolled', y > 40);
-    toTop.classList.toggle('show', y > 600);
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();

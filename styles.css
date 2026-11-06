@@ -550,22 +550,15 @@ a { color: inherit; text-decoration: none; }
 .footer p { color: var(--muted); font-size: .9rem; }
 
 .footer__company { margin-top: 10px; font-size: .82rem !important; }
-.line-float {
+.line-float, .fb-float {
   position: fixed; right: 20px; bottom: 78px; z-index: 90;
   display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px 10px 12px;
   border-radius: 999px; background: #06C755; color: #fff; font-family: 'Inter', sans-serif; font-weight: 600; font-size: .9rem;
   box-shadow: 0 10px 25px rgba(0,0,0,.4); transition: transform .3s var(--ease);
 }
-.line-float:hover { transform: translateY(-3px); }
-.line-float svg { width: 22px; height: 22px; fill: #fff; }
-.to-top {
-  position: fixed; right: 20px; bottom: 20px; z-index: 90;
-  width: 46px; height: 46px; border-radius: 50%;
-  display: grid; place-items: center; background: var(--gold-grad); color: #111; font-weight: 700;
-  opacity: 0; pointer-events: none; transform: translateY(12px);
-  transition: opacity .4s, transform .4s var(--ease);
-}
-.to-top.show { opacity: 1; pointer-events: auto; transform: none; }
+.fb-float { bottom: 20px; background: #1877F2; }
+.line-float:hover, .fb-float:hover { transform: translateY(-3px); }
+.line-float svg, .fb-float svg { width: 22px; height: 22px; fill: #fff; }
 
 /* ---------- Reveal animation ---------- */
 .reveal { opacity: 0; transform: translateY(30px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
@@ -622,14 +615,14 @@ a { color: inherit; text-decoration: none; }
   .step__card { padding: 20px 18px; }
   .hero__stats { grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
   .hero__stats .stat-card { padding: 16px 12px; }
-  .line-float span { display: none; }
+  .line-float span, .fb-float span { display: none; }
   .lightbox__arrow { width: 42px; height: 42px; font-size: 1.1rem; }
   .lightbox__slide { padding: 8px 12px; }
   .lightbox__thumb { width: 68px; height: 50px; }
   .lightbox__counter { font-size: .82rem; padding: 4px 10px; }
   .hero .eyebrow { letter-spacing: .14em; font-size: .7rem; }
   .hero .eyebrow::before { display: none; }
-  .line-float { padding: 12px; }
+  .line-float, .fb-float { padding: 12px; }
   .hero__stats { gap: 12px; }
   .stat-card { padding: 20px; }
   .stat-card__num { font-size: 1.7rem; }
