@@ -34,37 +34,64 @@
 </header>
 
 <main>
-<section class="page-hero">
-  <div class="page-hero__bg" aria-hidden="true"></div>
-  <div class="container page-hero__inner">
-    <nav class="breadcrumb" aria-label="เส้นทาง">
-      <a href="index.html">หน้าแรก</a><span aria-hidden="true">/</span><span>ผลงานทั้งหมด</span>
-    </nav>
-    <p class="eyebrow">Our Projects</p>
-    <h1 class="section-title">ผลงาน<span class="gold-text">ทั้งหมด</span></h1>
-    <p class="section-sub">รวมผลงานออกแบบตกแต่งภายใน บิวท์อิน รีโนเวท และต่อเติมบ้าน<br>เลือกหมวดหมู่ แล้วคลิกที่การ์ดเพื่อดูรูปทั้งหมดของแต่ละโปรเจกต์</p>
+<!-- ========== HERO ========== -->
+<section class="hero hero--page" id="top">
+  <div class="hero__bg hero__bg--projects" aria-hidden="true"></div>
+  <div class="container hero__inner">
+    <div class="hero__content reveal">
+      <nav class="breadcrumb" aria-label="เส้นทาง">
+        <a href="index.html">หน้าแรก</a><span aria-hidden="true">/</span><span>ผลงานทั้งหมด</span>
+      </nav>
+      <h1 class="hero__title">OUR<span class="gold-text"><br>PROJECTS</span></h1>
+      <p class="hero__sub">รวมผลงานออกแบบตกแต่งภายใน บิวท์อิน รีโนเวท และต่อเติมบ้านของ AREA DESIGNS ทั้งงานบ้านพักอาศัยและคอนโด</p>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--gold">ดูผลงานทั้งหมด</a>
+        <a href="index.html" class="btn btn--ghost">กลับหน้าแรก</a>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="section section--tight projects" id="projects">
+<!-- ========== 01. PROJECTS ========== -->
+<section class="section projects" id="projects">
   <div class="container">
-    <div class="filters" role="group" aria-label="หมวดหมู่ผลงาน">
-      <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">ทั้งหมด <span class="filter-btn__count" data-count="all"></span></button>
-      <button type="button" class="filter-btn" data-filter="interior" aria-pressed="false">งาน Interior <span class="filter-btn__count" data-count="interior"></span></button>
-      <button type="button" class="filter-btn" data-filter="renovate" aria-pressed="false">งาน Renovate <span class="filter-btn__count" data-count="renovate"></span></button>
+    <div class="sec-head reveal">
+      <div class="sec-head__main">
+        <span class="sec-head__ghost" aria-hidden="true">01</span>
+        <p class="eyebrow"><span class="eyebrow__num">01</span>Our Projects</p>
+        <h2 class="sec-head__title">ผลงาน<span class="gold-text">ทั้งหมด</span></h2>
+      </div>
+      <div class="sec-head__side">
+        <p class="sec-head__sub">เลือกหมวดหมู่ที่สนใจ แล้วคลิกที่การ์ดเพื่อดูรูปทั้งหมดของแต่ละโปรเจกต์</p>
+        <div class="filters" role="group" aria-label="หมวดหมู่ผลงาน">
+          <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">ทั้งหมด <span class="filter-btn__count" data-count="all"></span></button>
+          <button type="button" class="filter-btn" data-filter="interior" aria-pressed="false">งาน Interior <span class="filter-btn__count" data-count="interior"></span></button>
+          <button type="button" class="filter-btn" data-filter="renovate" aria-pressed="false">งาน Renovate <span class="filter-btn__count" data-count="renovate"></span></button>
+        </div>
+      </div>
     </div>
     <p class="filters__status" id="filterStatus" aria-live="polite"></p>
     <div class="projects__grid" id="allProjects"></div>
   </div>
 </section>
 
-<section class="cta-band">
-  <div class="container cta-band__inner reveal">
-    <div>
-      <h2>อยากได้บ้านแบบนี้บ้างไหม?</h2>
-      <p>ปรึกษาฟรี เข้าชมโรงงาน โชว์รูม หรือหน้างานจริงได้ก่อนตัดสินใจ</p>
+<!-- ========== 02. CONTACT ========== -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="sec-head sec-head--last reveal">
+      <div class="sec-head__main">
+        <span class="sec-head__ghost" aria-hidden="true">02</span>
+        <p class="eyebrow"><span class="eyebrow__num">02</span>Let's Talk</p>
+        <h2 class="sec-head__title">เริ่มต้น<span class="gold-text">บ้านในฝัน</span><br>ของคุณวันนี้</h2>
+      </div>
+      <div class="sec-head__side">
+        <p class="sec-head__sub">อยากได้บ้านแบบผลงานเหล่านี้? ปรึกษาฟรี เข้าชมโรงงาน โชว์รูม หรือหน้างานจริงได้ก่อนตัดสินใจ</p>
+        <div class="hero__cta">
+          <a href="index.html#contact" class="btn btn--gold">คุยกับเรา <span class="en">Let's Chat</span></a>
+          <a href="tel:0821549794" class="btn btn--outline">โทร 082 154 9794</a>
+        </div>
+      </div>
     </div>
-    <a href="index.html#contact" class="btn btn--gold">คุยกับเรา <span class="en">Let's Chat</span></a>
   </div>
 </section>
 </main>
