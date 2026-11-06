@@ -37,7 +37,7 @@
     media.appendChild(el('span', 'project__cat', LABELS[p.cat]));
 
     const body = el('div', 'project__body');
-    body.appendChild(el('span', 'project__no', `${String(i + 1).padStart(2, '0')} · ${p.tag}`));
+    body.appendChild(el('span', 'project__no', p.tag));
     body.appendChild(el('h3', null, p.title));
     body.appendChild(el('p', 'project__th', p.th));
     body.appendChild(el('p', 'project__desc', p.desc));

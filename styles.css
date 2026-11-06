@@ -78,10 +78,6 @@ a { color: inherit; text-decoration: none; }
   background: linear-gradient(90deg, transparent, rgba(212,175,55,.5), transparent);
 }
 
-/* Section number in the small label, e.g. "03 —— OUR PROJECTS" */
-.eyebrow:has(.eyebrow__num)::before { display: none; }
-.eyebrow__num { color: var(--gold-bright); font-weight: 600; letter-spacing: .08em; display: inline-flex; align-items: center; gap: 12px; }
-.eyebrow__num::after { content: ""; width: 36px; height: 1px; background: var(--gold); }
 
 /* Section header: title on the left, description (and button) on the right */
 .sec-head {
