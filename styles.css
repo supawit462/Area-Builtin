@@ -89,13 +89,7 @@ a { color: inherit; text-decoration: none; }
   padding-bottom: 32px; margin-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,.08);
 }
 .sec-head::after { content: ""; position: absolute; left: 0; bottom: -1px; width: 120px; height: 2px; background: var(--gold-grad); }
-.sec-head__main { position: relative; padding-top: clamp(28px, 4vw, 48px); }
-.sec-head__ghost {
-  position: absolute; left: -6px; top: -10px; z-index: 0; pointer-events: none;
-  font-weight: 700; font-size: clamp(5.5rem, 11vw, 9.5rem); line-height: 1;
-  color: transparent; -webkit-text-stroke: 1px rgba(212,175,55,.22);
-}
-.sec-head__main .eyebrow, .sec-head__title { position: relative; z-index: 1; }
+.sec-head__main { position: relative; }
 .sec-head__title { font-weight: 600; font-size: clamp(2rem, 4.2vw, 3.1rem); line-height: 1.2; }
 .sec-head__side { display: flex; flex-direction: column; align-items: flex-start; gap: 22px; padding-bottom: 6px; }
 .sec-head__sub { color: #BDBDBD; font-weight: 300; line-height: 1.8; max-width: 480px; }
